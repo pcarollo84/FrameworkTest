@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		2D6A28631E336D3F7691C6B9 /* libPods-FrameworkTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE3C51CBA2183F4162D18E5C /* libPods-FrameworkTest.a */; };
 		523DD7991D8C0666002A4135 /* FrameworkTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 523DD7971D8C0666002A4135 /* FrameworkTest.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		523DD7A11D8C06EC002A4135 /* Dummy.h in Headers */ = {isa = PBXBuildFile; fileRef = 523DD79F1D8C06EC002A4135 /* Dummy.h */; };
-		523DD7A21D8C06EC002A4135 /* Dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 523DD7A01D8C06EC002A4135 /* Dummy.m */; };
+		52E56EAA1D8C09C8008506FA /* Dummy.h in Headers */ = {isa = PBXBuildFile; fileRef = 52E56EA81D8C09C8008506FA /* Dummy.h */; };
+		52E56EAB1D8C09C8008506FA /* Dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E56EA91D8C09C8008506FA /* Dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,8 +18,8 @@
 		523DD7941D8C0666002A4135 /* FrameworkTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FrameworkTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		523DD7971D8C0666002A4135 /* FrameworkTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FrameworkTest.h; sourceTree = "<group>"; };
 		523DD7981D8C0666002A4135 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		523DD79F1D8C06EC002A4135 /* Dummy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dummy.h; sourceTree = SOURCE_ROOT; };
-		523DD7A01D8C06EC002A4135 /* Dummy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dummy.m; sourceTree = SOURCE_ROOT; };
+		52E56EA81D8C09C8008506FA /* Dummy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dummy.h; sourceTree = "<group>"; };
+		52E56EA91D8C09C8008506FA /* Dummy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dummy.m; sourceTree = "<group>"; };
 		6FF3A391DE7F8FE73E8A88BA /* Pods-FrameworkTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FrameworkTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-FrameworkTest/Pods-FrameworkTest.release.xcconfig"; sourceTree = "<group>"; };
 		AE3C51CBA2183F4162D18E5C /* libPods-FrameworkTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FrameworkTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -57,13 +57,21 @@
 		523DD7961D8C0666002A4135 /* FrameworkTest */ = {
 			isa = PBXGroup;
 			children = (
+				52E56EA71D8C09C8008506FA /* Classes */,
 				523DD7971D8C0666002A4135 /* FrameworkTest.h */,
 				523DD7981D8C0666002A4135 /* Info.plist */,
-				523DD79F1D8C06EC002A4135 /* Dummy.h */,
-				523DD7A01D8C06EC002A4135 /* Dummy.m */,
 			);
 			path = FrameworkTest;
 			sourceTree = "<group>";
+		};
+		52E56EA71D8C09C8008506FA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				52E56EA81D8C09C8008506FA /* Dummy.h */,
+				52E56EA91D8C09C8008506FA /* Dummy.m */,
+			);
+			path = Classes;
+			sourceTree = SOURCE_ROOT;
 		};
 		EA354F1BD639E23DCD8A6BC0 /* Frameworks */ = {
 			isa = PBXGroup;
@@ -90,7 +98,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				523DD7991D8C0666002A4135 /* FrameworkTest.h in Headers */,
-				523DD7A11D8C06EC002A4135 /* Dummy.h in Headers */,
+				52E56EAA1D8C09C8008506FA /* Dummy.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,7 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				523DD7A21D8C06EC002A4135 /* Dummy.m in Sources */,
+				52E56EAB1D8C09C8008506FA /* Dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
