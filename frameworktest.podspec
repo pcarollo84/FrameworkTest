@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.name         = "frameworktest"
   s.version      = "0.0.1"
-  s.summary      = "A short description of frameworktest."
+  s.summary      = "This a test framework to test that FMDB pod does not work inside this podspec"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,6 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
+   This a test framework to test that FMDB pod does not work inside this podspec. It just does not work.
                    DESC
 
   s.homepage     = "https://github.com/pcarollo84/FrameworkTest"
@@ -38,7 +39,7 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  s.license      = "MIT (example)"
+  s.license      = "MIT"
   # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
 
@@ -64,7 +65,7 @@ Pod::Spec.new do |s|
   #
 
   # s.platform     = :ios
-  # s.platform     = :ios, "5.0"
+  s.platform     = :ios, "9.0"
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
@@ -132,6 +133,6 @@ Pod::Spec.new do |s|
   # s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  # s.dependency "JSONKit", "~> 1.4"
+  s.dependency "FMDB", "~> 2.5"
 
 end
