@@ -11,7 +11,6 @@
 		523DD7991D8C0666002A4135 /* FrameworkTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 523DD7971D8C0666002A4135 /* FrameworkTest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		52E56EAA1D8C09C8008506FA /* Dummy.h in Headers */ = {isa = PBXBuildFile; fileRef = 52E56EA81D8C09C8008506FA /* Dummy.h */; };
 		52E56EAB1D8C09C8008506FA /* Dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E56EA91D8C09C8008506FA /* Dummy.m */; };
-		52E56EAD1D8C2A89008506FA /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 52E56EAC1D8C2A89008506FA /* libsqlite3.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +30,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52E56EAD1D8C2A89008506FA /* libsqlite3.tbd in Frameworks */,
 				2D6A28631E336D3F7691C6B9 /* libPods-FrameworkTest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,6 +315,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1FC01D51183912390B323FC0 /* Pods-FrameworkTest.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = SJA4BK3YB8;
@@ -326,6 +325,7 @@
 				INFOPLIST_FILE = FrameworkTest/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = co.uk.psm.FrameworkTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -336,6 +336,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6FF3A391DE7F8FE73E8A88BA /* Pods-FrameworkTest.release.xcconfig */;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = SJA4BK3YB8;
@@ -345,6 +346,7 @@
 				INFOPLIST_FILE = FrameworkTest/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = co.uk.psm.FrameworkTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
