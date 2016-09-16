@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "frameworktest"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "This a test framework to test that FMDB pod does not work inside this podspec"
 
   # This description is used to generate tags and improve search results.
