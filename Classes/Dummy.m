@@ -8,6 +8,7 @@
 
 #import "Dummy.h"
 #import <FMDB/FMDB.h>
+#import <sqlite3.h>
 
 @implementation Dummy
 
@@ -16,9 +17,12 @@
     // Create User Defined Functions
     [db makeFunctionNamed:@"udf_DistanceBetweenLocations"
          maximumArguments:5
-                withBlock:^(sqlite3_context *context, int argc, sqlite3_value **argv) {
+                withBlock:^(void *context, int argc, void **argv) {
                     
 #define DEG2RAD(degrees) (degrees * 0.01745327) // degrees * pi over 180
+                    
+                    context = (sqlite3_context *) context;
+                    *argv = (sqlite3_value *)argv;
                     
                     // check that we have four arguments (lat1, lon1, lat2, lon2)
                     assert(argc == 5);
@@ -57,7 +61,11 @@
     //  Uniform Price to PCM  ConvertRentalPrice( let.Price, let.Frequence, 'pcm')
     [db makeFunctionNamed:@"udf_ConvertRentalPrice"
          maximumArguments:3
-                withBlock:^(sqlite3_context *context, int argc, sqlite3_value **argv) {
+                withBlock:^(void *context, int argc, void **argv) {
+                    
+                    context = (sqlite3_context *) context;
+                    *argv = (sqlite3_value *)argv;
+
                     
                     assert(argc == 3);
                     // check that all three arguments are non-null

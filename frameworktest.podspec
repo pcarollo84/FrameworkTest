@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "frameworktest"
-  s.version      = "0.0.4"
+  s.version      = "0.0.5"
   s.summary      = "This a test framework to test that FMDB pod does not work inside this podspec"
 
   # This description is used to generate tags and improve search results.
@@ -133,6 +133,9 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  s.dependency "FMDB", "~> 2.5"
+  s.dependency "FMDB", "~> 2.6.2"
+
+  s.library = "sqlite3"
+  s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
 
 end
